@@ -1,0 +1,128 @@
+<% if @message_if_booked_before %>
+
+    <!-- FOR DESKTOPS -->
+    <% if !mobile_device? %>
+        <h3 style="text-align: center">Reservation Alert</h3>
+
+        <div class="alert alert-danger">
+          You can only book one seat in each direction per day. By booking this seat your previous booking for travelling on this day in this direction will be canceled
+        </div>
+
+
+        <table class="table table-bordered">
+          <th>From</th>
+          <th>To</th>
+          <th>Date</th>
+          <th>New Time</th>
+
+          <tr>
+            <td><%= @origin %> </td>
+            <td><%= @destination %></td>
+            <td><%= @date %></td>
+            <td><%= @time %></td>
+          </tr>
+        </table>
+
+        <form name="my_form" method="post" action="change_time">
+            <input type="hidden" name="time" value="<%= @time %>">
+            <input type="hidden" name="route" value="<%= @route %>">
+            <input type="hidden" name="date" value="<%= @date %>">
+            <input type="hidden" name="origin" value="<%= @origin %>">
+            <input type="hidden" name="destination" value="<%= @destination %>">
+            <input type="hidden" name="user" value="<%= @user %>">
+            <input class="btn btn-primary" type="submit" name="go" value="Book This Seat" >
+         </form>
+
+        <!-- FOR MOBILES -->
+    <% else %>
+        <h3 style="text-align: center">Reservation Summary</h3>
+
+        <div class="alert alert-danger">
+            You can only book one seat in each direction per day. By booking this seat your previous booking for travelling on this day in this direction will be canceled
+        </div>
+
+        <table class="table table-bordered" id="mobile-table-full-margins">
+          <th>From</th>
+          <th>To</th>
+          <th>Date</th>
+          <th>New Time</th>
+
+          <tr>
+            <td><%= @origin %> </td>
+            <td><%= @destination %></td>
+            <td><%= @date %></td>
+            <td><%= @time %></td>
+          </tr>
+        </table>
+
+        <form name="my_form" method="post" action="change_time">
+          <input type="hidden" name="time" value="<%= @time %>">
+          <input type="hidden" name="route" value="<%= @route %>">
+          <input type="hidden" name="date" value="<%= @date %>">
+          <input type="hidden" name="origin" value="<%= @origin %>">
+          <input type="hidden" name="destination" value="<%= @destination %>">
+          <input type="hidden" name="user" value="<%= @user %>">
+          <input class="btn btn-primary" type="submit" name="go" value="Book This Seat" >
+        </form>
+
+    <% end %>
+
+
+
+    </br></br>
+    <a  class="btn btn-primary" href="/home" role="button">Home</a>
+    </br></br></br>
+
+<% elsif @message_if_not_booked %>
+
+    <!-- FOR DESKTOPS -->
+    <% if !mobile_device? %>
+        <h3 style="text-align: center">Reservation Summary</h3>
+
+        <div class="alert alert-success">
+          <strong>Seat reserved!</strong> Confirmation email has been sent to your email account
+        </div>
+
+        <table class="table table-bordered">
+          <th>From</th>
+          <th>To</th>
+          <th>Date</th>
+          <th>Time</th>
+
+          <tr>
+            <td><%= @origin %> </td>
+            <td><%= @destination %></td>
+            <td><%= @date %></td>
+            <td><%= @time %></td>
+          </tr>
+        </table>
+
+        <!-- FOR MOBILES -->
+    <% else %>
+        <h3 style="text-align: center">Reservation Summary</h3>
+
+        <div class="alert alert-success">
+        <strong>Seat reserved!</strong> Confirmation email has been sent to your email account
+        </div>
+
+        <table class="table table-bordered" id="mobile-table-full-margins">
+          <th>From</th>
+          <th>To</th>
+          <th>Date</th>
+          <th>Time</th>
+
+          <tr>
+            <td><%= @origin %> </td>
+            <td><%= @destination %></td>
+            <td><%= @date %></td>
+            <td><%= @time %></td>
+          </tr>
+        </table>
+    <% end %>
+
+
+    </br></br>
+    <a  class="btn btn-primary" href="/home" role="button">Home</a>
+    </br></br></br>
+
+<% end %>

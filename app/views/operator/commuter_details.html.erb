@@ -1,0 +1,33 @@
+<% if admin %>
+
+<p> User Details </p>
+
+<b>Username:</b> <%= @commuter.username %> <br>
+
+
+<% if @commuter.mobile.present? %>
+    <b>Mobile:</b> <%= @commuter.mobile %>
+<% else %>
+    <b>Mobile:</b> Not provided.
+<% end %>
+<br/>
+
+<% if @commuter.email.present? %>
+    <b>Email:</b> <%= @commuter.email %>
+<% else %>
+    <b>Email:</b> Not Provided
+<% end %>
+
+<br/>
+Commuter missed bus with seat reservation <b><%= @commuter.missed %></b> times.
+
+    </br></br></br>
+    <a id="home_button" class="btn btn-primary" href="/home" role="button">Home</a>
+    </br></br></br>
+
+<% else %>
+
+
+<% flash[:error] = "You need administrator account to view this page" %>
+
+<% end %>

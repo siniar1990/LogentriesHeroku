@@ -1,0 +1,49 @@
+<!-- FOR DESKTOPS -->
+<% if !mobile_device? %>
+    <h3 style="text-align: center">Reservation Summary</h3>
+
+    <div class="alert alert-success">
+      <strong>Seat reserved!</strong> Confirmation email has been sent to your email account
+    </div>
+
+    <table class="table table-bordered">
+      <th>From</th>
+      <th>To</th>
+      <th>Date</th>
+      <th>Time</th>
+
+      <tr>
+        <td><%= @origin %> </td>
+        <td><%= @destination %></td>
+        <td><%= @date %></td>
+        <td><%= @time %></td>
+      </tr>
+    </table>
+
+    <!-- FOR MOBILES -->
+<% else %>
+    <h3 style="text-align: center">Reservation Summary</h3>
+
+    <div class="alert alert-success">
+      <strong>Seat reserved!</strong> Confirmation email has been sent to your email account
+    </div>
+
+    <table class="table table-bordered" id="mobile-table-full-margins">
+      <th>From</th>
+      <th>To</th>
+      <th>Date</th>
+      <th>Time</th>
+
+      <tr>
+        <td><%= @origin %> </td>
+        <td><%= @destination %></td>
+        <td><%= @date %></td>
+        <td><%= @time %></td>
+      </tr>
+    </table>
+<% end %>
+
+
+</br></br>
+<a  class="btn btn-primary" href="/home" role="button">Home</a>
+</br></br></br>

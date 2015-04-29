@@ -1,0 +1,45 @@
+<% if admin %>
+
+<%= form_for Reservation.new, :as => :reservation, :url => find_reservation_path do |f| %>
+    <p>
+      <%= f.label 'Find reservation for user:' %><br/>
+      <%= f.text_field :user, :id => "input_fields" %>
+    </p>
+
+    <p>
+      <%= f.submit 'Show reservation details' %>&nbsp;&nbsp;&nbsp;
+    </p>
+<% end %>
+
+<br/>
+
+<%if @found_reservation == true %>
+History of reservations by <%= @list[0].user %>. <br/><br/>
+
+<table class="table table-striped">
+  <tr>
+    <th>Origin</th>
+    <th>Destination</th>
+    <th>Time</th>
+    <th>Date</th>
+  </tr>
+
+    <% for i in 0..@reservations.length-1 %>
+      <tr>
+        <td> <%= @list[i].origin %> </td>
+        <td> <%= @list[i].destination %> </td>
+        <td> <%= @list[i].time %> </td>
+        <td> <%= @list[i].date %> </td>
+      </tr>
+    <% end %>
+</table>
+<% end %>
+    </br></br></br>
+    <p> <a id="home_button" class="btn btn-primary" href="/home" role="button">Home</a></p>
+    </br></br></br>
+
+<% else %>
+
+<% flash[:error] = "You need administrator account to view this page" %>
+
+<% end %>

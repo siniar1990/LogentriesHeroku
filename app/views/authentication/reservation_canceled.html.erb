@@ -1,0 +1,35 @@
+<% if current_commuter %>
+
+
+
+
+
+<% if Reservation.all.where(:id => params[:reservation]).exists? %>
+
+    <% Reservation.delete(params[:reservation]) %>
+
+        <div class="alert alert-success">
+          <strong>Reservation canceled !</strong>
+        </div>
+
+
+<% else %>
+
+        <div class="alert alert-error">
+          <strong>Reservation already canceled !</strong>
+        </div>
+
+<%end%>
+
+
+    </br></br></br>
+    <p> <a id="home_button" class="btn btn-primary" href="/home" role="button">Home</a></p>
+    </br></br></br>
+
+<% else %>
+
+    <% flash[:error] = "You need to be logged in" %>
+
+
+
+<% end %>

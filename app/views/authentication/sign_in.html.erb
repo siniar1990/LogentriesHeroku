@@ -1,0 +1,25 @@
+<div style="text-align: center;">
+
+
+
+<%= form_for Commuter.new, :as => :commuter, :url => sign_in_path do |f| %>
+      <div class="form-group">
+      <label for="Username"><b>Username</b></label>
+
+      <%= f.text_field :username, :id => "input_fields", :autocapitalize => "off"%>
+
+      </div>
+    <p>
+      <label for="Password"><b>Password</b></label>
+      <%= f.password_field :password, :id => "input_fields" %>
+    </p>
+
+    <p>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </p>
+<% end %>
+
+</div>
+
+
+

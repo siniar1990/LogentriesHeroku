@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<% if current_commuter %>
+
+    <!-- USER INTERFACE -->
+
+    <% if !admin && !driver %>
+
+
+
+        <div id="mobile-options">
+            <div class="well well-sm">Seat reservations can be made up to 60 minutes prior to the departure of the bus from the terminus.
+              Please note that passengers must only book seats when they absolutely intend to travel on it.
+              If a passenger does not use a prebooked seat on 3 occasions they will no longer have the facility to reserve a seat.</div>
+          <p><a class="btn btn-primary btn-lg btn-block" href="bus_connections" role="button">Reserve Seat</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="my_reservations" role="button">Manage reservations</a></p>
+
+          </div>
+
+          </br></br></br>
+          <p><a class="btn btn-danger" href="signed_out" role="button">Sign Out</a></p>
+          </br></br></br>
+    <% end %>
+
+    <!-- ADMIN INTERFACE -->
+
+
+    <% if admin %>
+
+        <% if !mobile_device? %>
+
+        <!-- DESKTOP ONLY -->
+        <div id="mobile-options">
+          <p><a class="btn btn-primary btn-lg btn-block" href="create_commuter" role="button">Create Commuter</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="delete_commuter" role="button">Delete Commuter</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="show_commuter" role="button">Find Commuter</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="suspend_commuter" role="button">Suspend Commuter</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="activate_commuter" role="button">Activate Commuter</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="warn_commuter" role="button">Warn Commuter</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="find_reservation" role="button">Find Reservation</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="display_reservations" role="button">Display Reservations</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="all_users" role="button">Display Users List</a></p>
+          </br></br></br>
+          <p> <a id="signout_button" class="btn btn-danger" href="signed_out" role="button">Sign Out</a></p>
+          </br></br></br>
+
+           </div>
+
+        <% else %>
+
+
+            <!-- MOBILE ONLY -->
+
+
+              <div class="container">
+              <p><a class="btn btn-primary btn-lg btn-block" href="create_commuter" role="button">Create Commuter</a></p>
+              <p><a class="btn btn-primary btn-lg btn-block" href="delete_commuter" role="button">Delete Commuter</a></p>
+              <p><a class="btn btn-primary btn-lg btn-block" href="show_commuter" role="button">Find Commuter</a></p>
+              <p><a class="btn btn-primary btn-lg btn-block" href="suspend_commuter" role="button">Suspend Commuter</a></p>
+              <p><a class="btn btn-primary btn-lg btn-block" href="activate_commuter" role="button">Activate Commuter</a></p>
+              <p><a class="btn btn-primary btn-lg btn-block" href="warn_commuter" role="button">Warn Commuter</a></p>
+              <p><a class="btn btn-primary btn-lg btn-block" href="find_reservation" role="button">Find Reservation</a></p>
+              <p><a class="btn btn-primary btn-lg btn-block" href="display_reservations" role="button">Display Reservations</a></p>
+              <p><a class="btn btn-primary btn-lg btn-block" href="all_users" role="button">Display Users List</a></p>
+              </br></br></br>
+              <p> <a id="signout_button" class="btn btn-danger" href="signed_out" role="button">Sign Out</a></p>
+              </br></br></br>
+
+            </div>
+
+
+        <% end %>
+
+
+    <% end %>
+
+
+    <!-- DRIVER INTERFACE -->
+
+
+    <% if driver %>
+        <div id="Options">
+          <p><a class="btn btn-primary btn-lg " href="reservations" role="button">Display reservations</a></p>
+          </br></br></br>
+          <p> <a id="signout_button" class="btn btn-danger" href="signed_out" role="button">Sign Out</a></p>
+          </br></br></br>
+    </div>
+
+    <% end %>
+
+
+
+<% else %>
+      <p id="center_login"><a class="btn btn-success custom_button" href="sign_in" role="button">Log In Here</a></p>
+
+<% end %>
+

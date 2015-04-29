@@ -1,0 +1,26 @@
+<%if admin %>
+
+<div class="col-md-12">
+
+
+  <ul class="pager">
+    <li style="padding-right: 5px"><a href="/past">Past</a></li>
+    <li style="padding-right: 5px"><a href="/reservations">Today</a></li>
+    <li><a href="/future">Future</a></li>
+  </ul>
+
+  </br></br></br>
+  <a id="home_button" class="btn btn-primary" href="/home" role="button">Home</a>
+  </br></br></br>
+
+
+</div>
+
+
+
+
+<% else %>
+
+<% flash[:error] = "You need administrator account to view this page" %>
+
+<% end %>

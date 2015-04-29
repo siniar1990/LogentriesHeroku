@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-# Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+# Use postgresql as the database for Active Record
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -27,18 +27,13 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-
-# Postgres
-gem 'pg'
-
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+  gem 'bcrypt-ruby', :require=>'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -49,4 +44,26 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'rake', '~> 10.4.2'
+gem 'protected_attributes'
+
+gem "json", "~> 1.8.1"
+
+gem "actionmailer", "~> 4.0.1"
+
+gem "thin", "~> 1.6.1"
+
+gem 'whenever', :require => false
+
+
+gem "therubyracer"
+
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+
+gem "twitter-bootstrap-rails"
+
+gem 'rails_12factor'
+
+gem 'bootstrap-datepicker-rails'
+
+
+ruby "1.9.3"

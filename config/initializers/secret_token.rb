@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Logentries::Application.config.secret_key_base = 'dc3e73a6fd7e6747635eec098378ba15cdc5f45c83c88bebec902c3d242a11170119f11c10f6bc9f76228f06836ec1311d635869c537274f342703b11b695126'
+WexfordBus::Application.config.secret_key_base = '05150dc622f6dc7420cfb9120fbfaa9fbaf799e0be04dd6d18e6330a8a30b9296ec87e42141bcf632c78d07bdd4cab837c003c128e719d62141d64b7a2c9af22'

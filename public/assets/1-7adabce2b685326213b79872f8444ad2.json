@@ -1,0 +1,43 @@
+[
+    {
+        "bus_stop": "Wexford",
+        "direction": "to Dublin Airport",
+        "times": [
+            {"time": "01:30", "details": "Everyday, No Dublin city stops served"},
+            {"time": "05:00", "details": "Not on Sundays or Bank Holidays, 15 mins later on Saturday"},
+            {"time": "06:00", "details": "Not on Sundays or Bank Holidays, 15 mins later on Saturday"},
+            {"time": "07:20", "details": "Everyday, 10 mins later at weekend"}, 
+            {"time": "09:30", "details": "Everyday"},
+            {"time": "10:30", "details": "Everyday"}, 
+            {"time": "11:30", "details": "Everyday"},
+            {"time": "12:30", "details": "Not on Sundays or Bank Holidays"}, 
+            {"time": "13:30", "details": "Everyday"}, 
+            {"time": "15:30", "details": "Everyday"}, 
+            {"time": "17:30", "details": "Everyday"}, 
+            {"time": "18:30", "details": "Only on Sundays and Bank Holidays, COLLEGE TERM ONLY"},
+            {"time": "19:30", "details": "Everyday"}
+            {"time": "24:30", "details": "Everyday"}
+        ]
+    },
+    {
+        "bus_stop": "Wexford",
+        "direction": "Arrivals *terminus*",
+        "times": [
+            {"time": "08:40", "details": "Not on Sundays or Bank Holidays"}, 
+            {"time": "11:15", "details": "Everyday"}, 
+            {"time": "13:15", "details": "Everyday"}, 
+            {"time": "15:20", "details": "Not on Sundays or Bank Holidays"}, 
+            {"time": "15:30", "details": "Only on Sundays and Bank Holidays"}, 
+            {"time": "16:20", "details": "Not on Sundays or Bank Holidays"}, 
+            {"time": "17:20", "details": "Everyday"}, 
+            {"time": "18:20", "details": "Not on Sundays or Bank Holidays"}, 
+            {"time": "19:15", "details": "Everyday"},  
+            {"time": "19:50", "details": "Monday to Friday only"},  
+            {"time": "20:15", "details": "Everyday"},
+            {"time": "21:55", "details": "Everyday"}, 
+            {"time": "23:55", "details": "Everyday"},             
+            {"time": "00.50", "details": "Only on Sundays and Bank Holidays, COLLEGE TERM ONLY"}, 
+            {"time": "01:25", "details": "Everyday"}            
+        ]
+    }
+]
