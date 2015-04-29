@@ -1,4 +1,4 @@
-WexfordBus::Application.configure do
+Logentries::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -13,7 +13,7 @@ WexfordBus::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Don't care if the commuter_mailer can't send.
+  # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger.
@@ -27,26 +27,4 @@ WexfordBus::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  #config.action_mailer.delivery_method = :smtp
-  #config.action_mailer.smtp_settings = {
-  #    :address              => "smtp.gmail.com",
-  #    :port                 => 587,
-  #    :domain               => "gmail.com",
-   #   :user_name            => "siniar1990",
-   #   :password             => "haker123",
-   #   :authentication       => "plain",
-   #   :enable_starttls_auto => true  }
-
-  ActionMailer::Base.smtp_settings = {
-      :user_name => 'app21135412@heroku.com',
-      :password => 'wt72v9po',
-      :domain => 'www.wexfordbus.com',
-      :address => 'smtp.sendgrid.net',
-      :port => 587,
-      :authentication => :plain,
-      :enable_starttls_auto => true
-  }
-
-
 end
-

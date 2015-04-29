@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-WexfordBus::Application.load_tasks
+Logentries::Application.load_tasks

@@ -1,4 +1,4 @@
-WexfordBus::Application.configure do
+Logentries::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -59,7 +59,7 @@ WexfordBus::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-   config.assets.precompile += %w('.woff', '.eot', '.svg', '.ttf' )
+  # config.assets.precompile += %w( search.js )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -77,25 +77,4 @@ WexfordBus::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
-  config.action_mailer.delivery_method = :smtp
-  #config.action_mailer.smtp_settings = {
-  #    :address              => "smtp.gmail.com",
-  #    :port                 => 587,
-   #   :domain               => "gmail.com",
-   #   :user_name            => "siniar1990",
-   #   :password             => "haker123",
-   #   :authentication       => "plain",
-   #   :enable_starttls_auto => true  }
-
-  ActionMailer::Base.smtp_settings = {
-      :user_name => 'app21135412@heroku.com',
-      :password => 'wt72v9po',
-      :domain => 'www.wexfordbus.com',
-      :address => 'smtp.sendgrid.net',
-      :port => 587,
-      :authentication => :plain,
-      :enable_starttls_auto => true
-  }
-
 end
