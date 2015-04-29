@@ -2,11 +2,9 @@
 
 development:
   adapter: postgresql
-  encoding: unicode
-  database: d6m6ne48gr2jbr
-  pool: 5
-  username: pjxefhylivpobi
-  password: LegD6wt6XKHaUJZd1GZ68Tu8wu
+  host: localhost
+  username: user
+  database: app-dev
 
 
 # Warning: The database defined as "test" will be erased and
@@ -19,9 +17,7 @@ development:
 #  timeout: 5000
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: d6m6ne48gr2jbr
-  pool: 5
-  username: pjxefhylivpobi
-  password: LegD6wt6XKHaUJZd1GZ68Tu8wu
+   adapter: postgresql
+   host: localhost
+   username: user
+   database: app-dev
